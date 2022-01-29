@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 import Fuse from "fuse.js";
 
@@ -23,28 +23,32 @@ export default function Home() {
     setQuery(currentTarget.value);
   }
   return (
-    <div className=" font-bold text-center flex mt-3 flex-col justify-center container mx-auto ">
-      <h1 className="text-5xl">Implementation of Fuse.js with Next.js</h1>
-=
-      <div className="bg-gray-400 p-10 flex justify-center items-center flex-col  text-4xl duration-200 rounded-xl my-4 ">
-        {result?.map((n) => {
-          return (
-            <div key={n.item.id}>
-              {" "}
-              <h1> Name :{n.item.name}</h1>{" "} 
-              <p>{n.score}</p>
-            </div>
-          );
-        })}
-      </div>
+    <div className=" bg-black w-full min-h-screen text-white font-bold text-center flex pt-3 flex-col justify-center ">
+      <div className="container mx-auto flex flex-col justify-center items-center ">
+        <h1 className="text-5xl">Implementation of Fuse.js with Next.js</h1>
 
-      <div>
-        <input
-          className="border-2 border-black rounded-xl text-4xl"
-          type="text"
-          value={query}
-          onChange={onSearch}
-        />
+        <div className="bg-gray-400 p-10 min-w-[30rem] flex justify-center items-center flex-col  text-3xl duration-200 rounded-xl my-4 ">
+          {result?.map((n) => {
+            return (
+              <div
+                key={n.item.id}
+                className="flex flex-col justify-center items-start"
+              >
+                {" "}
+                <h1> Name :{n.item.name}</h1> <p> time:{n.score}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div>
+          <input
+            className="border-2 text-black flex  p-[10px] justify-center items-center border-black rounded-xl text-3xl"
+            type="text"
+            value={query}
+            onChange={onSearch}
+          />
+        </div>
       </div>
     </div>
   );
