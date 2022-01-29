@@ -31,7 +31,7 @@ export default function Home() {
   const result = fuse.search(query);
 
   console.log(result);
-  function onSearch({ currentTarget }) {
+  function onSearch({ currentTarget }: any) {
     console.log(currentTarget);
     setQuery(currentTarget.value);
   }
