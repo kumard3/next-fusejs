@@ -1,26 +1,13 @@
 /* eslint-disable @next/next/link-passhref */
 import { useEffect, useState } from "react";
-import Link from "next/link";
+
 import Fuse from "fuse.js";
 
 import { userData } from "../data/Userdata";
-// import { type } from "os";
-// interface Person {
-//   name: string;
-//   username: string;
-//   email: string;
-//   password: string;
-//   phone: string;
-//   website: string;
-//   query?: string[] | undefined;
-// }
-// interface Person {
-//   name: string;
-//   age: number;
-// }
+
 const options = {
   includeScore: true,
-  // Search in `author` and in `tags` array
+
   keys: ["name", "username"],
 };
 
