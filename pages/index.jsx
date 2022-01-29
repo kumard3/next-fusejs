@@ -38,13 +38,7 @@ export default function Home() {
   return (
     <div className=" font-bold text-center flex mt-3 flex-col justify-center container mx-auto ">
       <h1 className="text-5xl">Implementation of Fuse.js with Next.js</h1>
-      {/* {query?.map((n)=> {
-            return(
-<div key={n.id}>
-  
-   </div>
-            )
-          })} */}
+=
       <div className="bg-gray-400 p-10 flex justify-center items-center flex-col  text-4xl duration-200 rounded-xl my-4 ">
         {result?.map((n) => {
           return (
