@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import {  useState } from "react";
+import { useState } from "react";
 
 import Fuse from "fuse.js";
 
@@ -10,6 +10,8 @@ const options = {
 
   keys: ["name", "username"],
 };
+
+
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -24,6 +26,8 @@ export default function Home() {
   }
   return (
     <div className=" bg-black w-full min-h-screen text-white font-bold text-center flex pt-3 flex-col justify-center ">
+
+
       <div className="container mx-auto flex flex-col justify-center items-center ">
         <h1 className="text-5xl">Implementation of Fuse.js with Next.js</h1>
 
